@@ -7,9 +7,78 @@
         <div class="nav-container">
           <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
           <nav class="nav-links">
-            <a href="{{ site.baseurl }}/">Home</a>
-            <a href="{{ site.baseurl }}/prelims">Prelims</a>
-            <a href="{{ site.baseurl }}/mains">Mains</a>
+            <div class="nav-dropdown">
+              <button class="nav-dropdown-toggle" aria-expanded="false">
+                <span>Explore</span>
+                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <div class="nav-section">
+                  <div class="nav-section-header">
+                    <button class="nav-section-toggle" aria-expanded="false">
+                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
+                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                      </svg>
+                      <span>Prelims</span>
+                    </button>
+                  </div>
+                  <div class="nav-section-content">
+                    <a href="{{ site.baseurl }}/prelims" class="nav-item">Overview</a>
+                    <div class="nav-subsection">
+                      <span class="nav-subsection-title">GS Paper 1</span>
+                      <a href="{{ site.baseurl }}/earths-interior" class="nav-subitem">Geography</a>
+                      <a href="{{ site.baseurl }}/prelims#history" class="nav-subitem">History</a>
+                    </div>
+                    <div class="nav-subsection">
+                      <span class="nav-subsection-title">GS Paper 2</span>
+                      <a href="{{ site.baseurl }}/constitution-of-india" class="nav-subitem">Constitution</a>
+                      <a href="{{ site.baseurl }}/judiciary" class="nav-subitem">Judiciary</a>
+                      <a href="{{ site.baseurl }}/emergency-provisions" class="nav-subitem">Emergency Provisions</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="nav-section">
+                  <div class="nav-section-header">
+                    <button class="nav-section-toggle" aria-expanded="false">
+                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
+                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                      </svg>
+                      <span>Mains</span>
+                    </button>
+                  </div>
+                  <div class="nav-section-content">
+                    <a href="{{ site.baseurl }}/mains" class="nav-item">Overview</a>
+                    <a href="{{ site.baseurl }}/strategy-for-mains-2026" class="nav-subitem">Strategy 2026</a>
+                    <div class="nav-subsection">
+                      <span class="nav-subsection-title">Papers</span>
+                      <a href="{{ site.baseurl }}/mains#gs1" class="nav-subitem">GS-1</a>
+                      <a href="{{ site.baseurl }}/mains#gs2" class="nav-subitem">GS-2</a>
+                      <a href="{{ site.baseurl }}/mains#gs3" class="nav-subitem">GS-3</a>
+                      <a href="{{ site.baseurl }}/mains#gs4" class="nav-subitem">GS-4</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="nav-section">
+                  <div class="nav-section-header">
+                    <button class="nav-section-toggle" aria-expanded="false">
+                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
+                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                      </svg>
+                      <span>Resources</span>
+                    </button>
+                  </div>
+                  <div class="nav-section-content">
+                    <a href="{{ site.baseurl }}/your-first-note" class="nav-subitem">Getting Started</a>
+                    <a href="{{ site.baseurl }}/polity-definitions" class="nav-subitem">Definitions</a>
+                    <a href="{{ site.baseurl }}/polity" class="nav-subitem">Mnemonics</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
         </div>
@@ -24,5 +93,44 @@
     </div>
 
     {% include link-previews.html wrapperQuerySelector="main" %}
+    
+    <script>
+      // Dropdown navigation functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        // Main dropdown toggle
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+        
+        if (dropdownToggle && dropdownMenu) {
+          dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+            dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+            dropdownMenu.classList.toggle('show');
+          });
+        }
+        
+        // Section toggles
+        const sectionToggles = document.querySelectorAll('.nav-section-toggle');
+        sectionToggles.forEach(toggle => {
+          toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            const content = toggle.closest('.nav-section').querySelector('.nav-section-content');
+            
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            content.classList.toggle('show');
+          });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.nav-dropdown')) {
+            dropdownToggle?.setAttribute('aria-expanded', 'false');
+            dropdownMenu?.classList.remove('show');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
