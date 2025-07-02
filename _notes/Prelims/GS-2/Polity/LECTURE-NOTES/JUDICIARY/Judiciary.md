@@ -1,7 +1,7 @@
 
 # 🇮🇳 INDIAN JUDICIARY SYSTEM 🏛️ 
 
-India's judiciary is defined as an **INDEPENDENT, INTEGRATED, and PYRAMIDAL JUDICIAL SYSTEM**.
+India's judiciary is defined as an **INDEPENDENT, INTEGRATED, and PYRAMIDAL JUDICIAL SYSTEM**. This system is fundamental to our [[Constitution of India]] and represents one of the three pillars of democracy alongside the legislature and executive.
 
 ## 🏗️ The Pyramidal Structure
 Illustrates the hierarchy:
@@ -47,7 +47,7 @@ This is a core principle. As a famous quote says: *"The only thing worse than No
 *   Meaning: *"Stand by what has been decided."*
 *   Ensures decisions by higher courts are **binding on lower courts**.
 *   Promotes **consistency, stability, and predictability**.
-*   📜 **Article 141 (Constitution of India):** "Law declared by Supreme Court to be binding on all courts The law declared by the Supreme Court shall be binding on all courts within the territory of India." This is the **LAW OF THE LAND**.
+*   📜 **Article 141 ([[Constitution of India]]):** "Law declared by Supreme Court to be binding on all courts The law declared by the Supreme Court shall be binding on all courts within the territory of India." This is the **LAW OF THE LAND**. This principle is closely related to [[Emergency Provisions]] during constitutional crises.
 *   Supreme Court decisions: Binding on ALL courts in India.
 *   High Court rulings: Apply within their respective jurisdictions.
 *   Upholds judicial discipline and coherent law application.

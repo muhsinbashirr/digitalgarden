@@ -1,127 +1,117 @@
 ---
-title: Your first seed
+title: Getting Started with Your UPSC Digital Garden
+category: strategy
 ---
 
-### Welcome!
+# Welcome to Your UPSC Knowledge Network! 🌱
 
-This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory. 
+Congratulations on taking the first step toward building a connected, comprehensive understanding of UPSC concepts. This digital garden is designed to help you see the **big picture** of how different topics interconnect.
 
-### Link syntax
+## 🎯 Why Connected Learning Matters for UPSC
 
-To link to another note, you can use multiple syntaxes. The following four use the "double-bracket" notation ([view the Markdown source file](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/master/_notes/your-first-note.md#link-syntax) to see the underlying syntax).
+Traditional note-taking creates isolated islands of information. But UPSC questions often test your ability to connect concepts across subjects. This digital garden helps you build those connections naturally.
 
-- Using the note title: [[a note about cats]]
-- Using the note's filename: [[cats]]
-- Using the note's title, with a label: [[A note about cats|link to the note about cats using the note title]]
-- Using the note's filename, with a label: [[cats|link to the note about cats using the note's filename]]
+### Real Examples from Your Notes
 
-You can organize notes in subdirectories and link them normally. For example, the links above all point to the `_notes/animals/cats.md` file. Here's another example: [[tigers]].
+Let's explore some connections already present in your collection:
 
-Non-latin languages are supported: [[안녕하세요]]; so are accents/diacritics: [[bon appétit!]]
+- **[[Constitution of India]]** connects to multiple areas:
+  - Links to [[Judiciary]] for understanding judicial review
+  - Connects to [[Emergency Provisions]] for constitutional crises
+  - Relates to [[Preamble]] for foundational principles
 
-Dashes and underscores in file names are supported, and may be omitted in the bracket link syntax. As an example, the `your-first-note.md` file can be linked to with [[your first note]] or [[your-first-note]], or even [[yOuR-FiRsT Note]].
+- **[[Geography]]** concepts like **[[Earths Interior]]** connect to:
+  - Disaster management (for General Studies)
+  - Environmental policies
+  - Regional development patterns
 
-In all cases, if the double-bracket link does not point to a valid note, the double brackets will still be shown, like this: [[there is no note that matches this link]].
+## 🔗 How to Build Connections
 
-Alternatively, you can use regular [Markdown syntax](https://www.markdownguide.org/getting-started/) for links, with a relative link to the other note, like this: [this is a Markdown link to the note about cats](/cats){: .internal-link}. Don't forget to use the `.internal-link` class to make sure the link is styled as an internal link (without the little arrow).
+### The Double-Bracket Magic
+When you see text like `[[Constitutional Amendment]]`, it creates a clickable link. More importantly:
+- The linked note will show this note in its "Linked Notes" section
+- This creates **bidirectional connections**
+- Over time, you build a web of knowledge
 
-Since the Web is all about HTML, you can always use plain HTML if you want, like this: <a class="internal-link" href="/cats">This is a link to the note about cats with HTML</a>.
+### Example Connections to Make
 
-Of course, you can also link to external websites, like this: [this is a link to Wikipedia](https://wikipedia.org/). Again, you can use plain HTML if you prefer. Footnotes are also supported and will be treated like internal links.[^1] You can point to other notes in your footnotes.[^2]
+As you study, try connecting:
 
-[^1]: This is a footnote. For more information about using footnotes, check out the [Markdown Guide](https://www.markdownguide.org/extended-syntax/#footnotes).
-[^2]: This is another footnote that links to the note about [[cats]]. You may also point to [[notes that do not exist]] if you wish.
+1. **Constitutional Topics**: Link [[Emergency Provisions]] to historical examples and current affairs
+2. **Geography & Governance**: Connect geographical features to administrative challenges
+3. **Strategy & Content**: Link your [[STRATEGY FOR MAINS 2026]] to specific topic notes
 
-### Tweet embedding
+## 📚 Your Learning Path
 
-Note: This behavior is disabled by default for privacy reasons. See "Site configuration" section below to enable it.
+### Start with Core Topics
+Begin with fundamental concepts:
+- [[Constitution of India]] - The foundation of governance
+- [[Judiciary]] - The pillar of democracy
+- [[Emergency Provisions]] - Crisis management in democracy
 
-You may include a tweet URL on its own line (like below), and it would be replaced with an official Twitter embed if the site configuration demands it.
+### Build Subject Connections
+- Link Polity concepts to current affairs
+- Connect Geography to environmental policies
+- Relate History to constitutional development
 
-https://twitter.com/jack/status/20
+### Strategic Preparation
+- Use [[STRATEGY FOR MAINS 2026]] as your roadmap
+- Connect strategy notes to content notes
+- Build topic-wise networks
 
-### Media embedding
+## 🎨 Visual Learning
 
-You may embed media files within a note using HTML5 media tags. Here's an example for an audio file:
+The **Note Graph** (visible in the sidebar) shows how your notes connect. As you add more links:
+- Isolated notes become connected
+- Clusters form around major topics
+- You can visually see your knowledge network grow
 
-"Jazzy Frenchy" by Benjamin Tissot from bensound.com
-<audio controls>
-  <source src="{{ site.baseurl }}/assets/jazzyfrenchy.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+## 💡 Pro Tips for UPSC Success
 
-### Site configuration
+### 1. Cross-Subject Linking
+Don't limit links to within subjects. The best UPSC answers show cross-cutting understanding:
+- Link constitutional provisions to historical events
+- Connect geographical features to political decisions
+- Relate economic policies to social outcomes
 
-Some behavior is configurable by tweaking the `_config.yml` file.
+### 2. Current Affairs Integration
+When you encounter current affairs, link them to:
+- Relevant constitutional provisions
+- Historical precedents
+- Geographical contexts
 
-**`use_html_extension`**: if you use a static host that doesn't support URLs that don't end with `.html` (such as Neocities), try changing the `use_html_extension` value to `true` in the `_config.yml` file and restart the Jekyll server (or re-build the site). This adds a `.html` extension to note URLs and may resolve issues with links. If you're still having trouble, I recommend using Netlify to host your digital garden: it's free, easy to use, and fully supports this template's features out of the box.
+### 3. Regular Review
+- Follow the "Linked Notes" to review related concepts
+- Use the visual graph to discover forgotten connections
+- Update links as your understanding deepens
 
-**`open_external_links_in_new_tab`**: when set to `true`, this makes external links open in new tabs. Set to `false` to open all links in the current tab.
+## 🚀 Your Next Steps
 
-**`embed_tweets`**: when set to `true`, tweet URLs on their own lines will be replaced with a Twitter embed. Default value is `false`.
+1. **Explore existing notes**: Click on the links above to see how your content is already organized
+2. **Add connections**: As you study, add `[[Note Name]]` links between related concepts
+3. **Build your strategy**: Connect your preparation strategy to specific content areas
+4. **Review regularly**: Use the bidirectional links to reinforce learning
 
-### Automatic bi-directional links
+---
 
-Notice in the "Notes mentioning this note" section that there is another note linking to this note. This is a bi-directional link, and those are automatically created when you create links to other notes.
+<div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+  <h3 style="color: #0369a1; margin-top: 0;">🎯 Ready to Build Your Network?</h3>
+  <p>Your UPSC journey is about building connections—between topics, concepts, and ideas. Start exploring your notes and watch your knowledge network grow!</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+    <a href="{{ site.baseurl }}/constitution-of-india" class="internal-link" style="padding: 1rem; background: white; border-radius: 8px; display: block; text-decoration: none;">
+      <strong>🏛️ Constitution</strong><br>
+      <small>Start with the foundation</small>
+    </a>
+    <a href="{{ site.baseurl }}/judiciary" class="internal-link" style="padding: 1rem; background: white; border-radius: 8px; display: block; text-decoration: none;">
+      <strong>⚖️ Judiciary</strong><br>
+      <small>Understand the system</small>
+    </a>
+    <a href="{{ site.baseurl }}/strategy-for-mains-2026" class="internal-link" style="padding: 1rem; background: white; border-radius: 8px; display: block; text-decoration: none;">
+      <strong>📋 Strategy</strong><br>
+      <small>Plan your preparation</small>
+    </a>
+  </div>
+</div>
 
-### Link previews
-
-If you're on a device with mouse support, try hovering your mouse on internal links to preview the notes: [[a note about cats]].
-
-Links that have been previewed will be cached to avoid redundant requests.
-
-### Images and other Markdown goodies
-
-Finally, because you have the full power of Markdown in this template, you can use regular Markdown syntax for various formatting options.
-
-Lists work as expected:
-
-- List element A
-- List element B
-- List element C
-
-1. List element
-2. List element
-3. List element
-
-If you'd like to quote other people, consider using quote blocks:
-
-> Lorem ipsum dolor sit amet
-
-And of course, images look great:
-
-<img src="{{ site.baseurl }}/assets/image.jpg"/>
-
-You can also ==highlight some content== by wrapping it with `==`.
-
-Non-latin languages are supported too: ==你好==, ==안녕하세요==, ==こんにちは==.
-
-### Code syntax highlighting
-
-You can add code blocks with full syntax color highlighting by wrapping code snippet in triple backticks and specifying the type of the code (`js`, `rb`, `sh`, etc.):
-
-```js
-// Here's a bit of JavaScript:
-if (a === b || c == d)
-  console.log('hello!')
-```
-
-```rb
-# And now some Ruby
-def foo(bar)
-  "baz"
-end
-```
-
-```sh
-$ cat /dev/urandom | grep "the answer to life" # shell scripts look nice too
-```
-
-
-### Next steps
-
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to build your own digital garden based on this template is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-Go forth, have fun, and learn new something every day! ✌️
+*Remember: Every connection you make strengthens your understanding. Happy learning! 🌟*

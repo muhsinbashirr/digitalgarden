@@ -3,45 +3,51 @@ layout: default
 ---
 
 <article>
-  <div>
+  <div class="note-header">
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+    <div class="note-meta">
+      {% if page.category %}
+        <span class="badge {{ page.category }}">{{ page.category | capitalize }}</span>
       {% endif %}
-    </time>
+      {% if page.type != 'pages' %}
+        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+          Last updated: {{ page.last_modified_at | date: "%B %-d, %Y" }}
+        </time>
+      {% endif %}
+    </div>
   </div>
 
   <div id="notes-entry-container">
     <content>
       {{ content }}
-      <p>This line appears after every note.</p>
     </content>
 
-    <side style="font-size: 0.9em">
-      <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
-      {% if page.backlinks.size > 0 %}
-      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
-      {% for backlink in page.backlinks %}
-        <div class="backlink-box">
-        <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
-        <div style="font-size: 0.9em">{{ backlink.excerpt | strip_html | truncatewords: 20 }}</div>
-        </div>
-      {% endfor %}
+    <side>
+      <div class="sidebar-section">
+        <h3>🔗 Linked Notes</h3>
+        {% if page.backlinks.size > 0 %}
+          <div class="backlinks-container">
+            {% for backlink in page.backlinks %}
+              <div class="backlink-box">
+                <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
+                  {{ backlink.title }}
+                </a>
+                <div class="backlink-excerpt">{{ backlink.excerpt | strip_html | truncatewords: 15 }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="no-backlinks">
+            <p>📝 This note hasn't been linked to yet. Start connecting your knowledge!</p>
+          </div>
+        {% endif %}
       </div>
-      {% else %}
 
-      <div style="font-size: 0.9em">
-        <p>
-          There are no notes linking to this note.
-        </p>
+      <div class="sidebar-section">
+        <h3>📊 Note Graph</h3>
+        <p class="graph-description">Explore connections between all notes:</p>
+        {% include notes_graph.html %}
       </div>
-      {% endif %}
     </side>
   </div>
 </article>
-
-<hr>
-
-<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
-
-{% include notes_graph.html %}

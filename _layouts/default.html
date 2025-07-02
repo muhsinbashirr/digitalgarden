@@ -2,12 +2,27 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <nav>{% include nav.html %}</nav>
-    <div class="wrapper">
-      <main>{{ content }}</main>
-      <footer>{% include footer.html %}</footer>
+    <header class="header">
+      <div class="container">
+        <div class="nav-container">
+          <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
+          <nav class="nav-links">
+            <a href="{{ site.baseurl }}/">🏠 Home</a>
+            <a href="{{ site.baseurl }}/prelims">📚 Prelims</a>
+            <a href="{{ site.baseurl }}/mains">📝 Mains</a>
+            <a href="{{ site.baseurl }}/about">ℹ️ About</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="wrapper">
+        <main>{{ content }}</main>
+        <footer>{% include footer.html %}</footer>
+      </div>
     </div>
 
-    {% include link-previews.html wrapperQuerySelector="content" %}
+    {% include link-previews.html wrapperQuerySelector="main" %}
   </body>
 </html>

@@ -1,8 +1,23 @@
-```table-of-contents
-```
+---
+title: STRATEGY FOR MAINS 2026
+category: strategy
 ---
 
-# 🗓️ Before Prelims 2026 Strategy
+```table-of-contents
+```
+
+# 🗓️ STRATEGY FOR MAINS 2026
+
+**Comprehensive Mains Strategy** that integrates with your [[Constitution of India]], [[Judiciary]], [[Emergency Provisions]], and [[Earths Interior]] knowledge base. This strategy connects all your digital garden notes into a unified preparation approach.
+
+## 🔗 Knowledge Integration Framework
+
+Your preparation builds upon existing strengths:
+- **Polity Foundation**: [[Constitution of India]] • [[Judiciary]] • [[Emergency Provisions]]
+- **Geography Base**: [[Earths Interior]] for physical geography and disaster management
+- **Cross-cutting Connections**: Use bidirectional links between subjects
+
+---
 
 ### ✅ Target:
 
@@ -22,15 +37,15 @@
 
 ## 📚 Mains Papers Breakdown (Total = 7)
 
-- **GS1**
+- **GS1** - History, Geography (connect [[Earths Interior]]), Society
     
-- **GS2**
+- **GS2** - Polity ([[Constitution of India]], [[Judiciary]], [[Emergency Provisions]]), Governance, IR
     
-- **GS3**
+- **GS3** - Economy, Environment (link to [[Earths Interior]]), Security
     
-- **GS4**
+- **GS4** - Ethics (connect to [[Judiciary]] ethics and constitutional values)
     
-- **Essay**
+- **Essay** - Integrate knowledge from all your notes
     
 - **Optional Paper 1 (op-1)**
     
@@ -152,10 +167,25 @@ If I’m able to do **5 out of these 6 tasks**, I’ll be **ahead of many aspira
 
 *(to be covered by **November**)
 ---
+
+## 🌐 Using Your Digital Garden for Mains
+
+### Cross-Subject Integration
+- **Constitutional Questions**: Use [[Constitution of India]] → [[Judiciary]] → [[Emergency Provisions]] connections
+- **Environmental Issues**: Link [[Earths Interior]] → Climate Change → Constitutional Environmental Provisions
+- **Governance**: Connect [[Judiciary]] reforms to current affairs and policy questions
+
+### Answer Writing Enhancement
+- Follow bidirectional links to find related points for comprehensive answers
+- Use the visual knowledge graph to discover unexpected connections
+- Update notes with current affairs to keep connections fresh
+
 ---
 
 > 🔁 Repeat weekly. The goal is consistency over perfection.  
 > Even hitting 5 out of 6 consistently puts you ahead in preparation.
+> 
+> **🌱 Garden Growth**: As you study, keep adding `[[links]]` between related concepts to strengthen your knowledge network.
 
 ---
 

@@ -1,3 +1,19 @@
+---
+title: Earth's Interior
+category: prelims
+---
+
+# Earth's Interior 🌍
+
+Understanding Earth's internal structure is fundamental to geography and has connections to disaster management, which is crucial for both [[Constitution of India]]'s emergency provisions and environmental policies. This knowledge forms the basis for understanding natural disasters that can trigger [[Emergency Provisions]].
+
+## Key Connections
+- Links to disaster management and constitutional emergency powers
+- Relates to environmental geography and policy frameworks
+- Connects to regional development based on geological features
+
+---
+
 **🌍** **Physical Geography - Lithosphere, Biosphere and Hydrosphere**  
   
 
@@ -76,11 +92,11 @@ So, the natural question is: **Why is it so hot deep inside?**
 
 - Known as the **Geothermal Gradient**.
 - **For every 32 meters**, temperature rises by **~1°C**.
-- So, at a depth of **~100 km**, you’ll reach **extremely hot, partially molten rock**.
+- So, at a depth of **~100 km**, you'll reach **extremely hot, partially molten rock**.
 
 ---
 
-**🧱** **Earth’s Interior Layers: Structure & Behavior**
+**🧱** **Earth's Interior Layers: Structure & Behavior**
 
 **1️****⃣** **LITHOSPHERE (0–100 km)**
 
@@ -120,7 +136,7 @@ So, the natural question is: **Why is it so hot deep inside?**
 
 **3️****⃣** **Mesosphere - (700–2900 km)**
 
-- Also made of silicate rocks, but it’s more **rigid and solid** than asthenosphere.
+- Also made of silicate rocks, but it's more **rigid and solid** than asthenosphere.
 - Composition SIMA
 - Lower mantle
 - Why?
@@ -137,7 +153,7 @@ Divided into two parts:
 
 - **Liquid** state
 - Made of **Nickel + Iron (NiFe)**
-- 🌐 Flow of liquid metal here creates **Earth’s magnetic field**
+- 🌐 Flow of liquid metal here creates **Earth's magnetic field**
 - Even under high pressure, it's molten due to:
 
 - **Low melting point of NiFe**
@@ -182,7 +198,7 @@ Divided into two parts:
 
 **🔬** **Important Elements of the Whole Earth and the Earth's Crust**
 
-|**Whole Earth**|**%**||**Earth’s Crust**|**%**|
+|**Whole Earth**|**%**||**Earth's Crust**|**%**|
 |---|---|---|---|---|
 |Iron|35||Oxygen|46|
 |Oxygen|30||Silicon|28|
@@ -241,13 +257,13 @@ Divided into two parts:
 
 **✅** **Why Study Earthquakes?**
 
-Earthquakes provide **indirect evidence** about Earth’s interior through **seismic waves**. These waves behave differently across layers, helping map the crust, mantle, and core.
+Earthquakes provide **indirect evidence** about Earth's interior through **seismic waves**. These waves behave differently across layers, helping map the crust, mantle, and core.
 
 ---
 
 **🌐** **What is an Earthquake?**
 
-An **earthquake** is the **sudden shaking** of the Earth’s surface due to the **release of energy** in the lithosphere. This energy travels as **seismic waves**.
+An **earthquake** is the **sudden shaking** of the Earth's surface due to the **release of energy** in the lithosphere. This energy travels as **seismic waves**.
 
 **🧱** **Cause:**
 
@@ -291,14 +307,14 @@ Seismic waves are like **ripples in water** when a stone is thrown. There are **
 
 ---
 
-**❓** **Why P-Waves Travel Through All Mediums but S-Waves Don’t?**
+**❓** **Why P-Waves Travel Through All Mediums but S-Waves Don't?**
 
 - **P-Waves** are **longitudinal** — they compress and expand particles, which is possible in **all states (solid/liquid/gas)**.
-- **S-Waves** are **transverse** — they **require rigid structure** to propagate (up-down motion), so they can’t travel through **liquids or gases** which don’t have rigidity.
+- **S-Waves** are **transverse** — they **require rigid structure** to propagate (up-down motion), so they can't travel through **liquids or gases** which don't have rigidity.
 
 ---
 
-**🌊** **2. Surface Waves (Travel on Earth’s surface)**
+**🌊** **2. Surface Waves (Travel on Earth's surface)**
 
 - Responsible for most **destruction**.
 - Move **slowest**, but cause **strong vibrations**.
@@ -326,3 +342,5 @@ Seismic waves are like **ripples in water** when a stone is thrown. There are **
 - Depends on **observation**, not instruments
 
 ---
+
+> **Note**: This note connects to multiple UPSC topics including constitutional emergency provisions during natural disasters and environmental policies in [[Constitution of India]].
