@@ -1,17 +1,18 @@
-// Clean Obsidian-style Theme
-$color-primary: #483699;
-$color-text: #2e3338;
-$color-text-muted: #6c7782;
-$color-background: #ffffff;
-$color-background-secondary: #fbfbfc;
-$color-border: #e3e5e8;
-$color-accent: #7c3aed;
-$color-link: #6366f1;
+// Vercel-style Black & White Theme
+$color-black: #000000;
+$color-gray-900: #111111;
+$color-gray-700: #333333;
+$color-gray-500: #666666;
+$color-gray-400: #999999;
+$color-gray-300: #cccccc;
+$color-gray-100: #f5f5f5;
+$color-white: #ffffff;
+$color-accent: #0070f3; // Minimal blue accent like Vercel
 
-$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-$font-family-mono: "Source Code Pro", Consolas, "Ubuntu Mono", monospace;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-mono: Menlo, Monaco, "Lucida Console", monospace;
 
-// Reset and base
+// Reset
 * {
   box-sizing: border-box;
 }
@@ -19,8 +20,8 @@ $font-family-mono: "Source Code Pro", Consolas, "Ubuntu Mono", monospace;
 body {
   font-family: $font-family;
   line-height: 1.6;
-  color: $color-text;
-  background: $color-background;
+  color: $color-black;
+  background: $color-white;
   margin: 0;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -29,54 +30,53 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 // Typography - Clean and minimal
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  line-height: 1.3;
-  color: $color-text;
-  margin: 1.5em 0 0.5em 0;
+  line-height: 1.25;
+  color: $color-black;
+  margin: 0 0 0.5rem 0;
   
-  &:first-child {
-    margin-top: 0;
+  &:not(:first-child) {
+    margin-top: 2rem;
   }
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  border-bottom: 1px solid $color-border;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.6rem;
-  margin-top: 2rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: 1.3rem;
-  color: $color-text-muted;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 1.1rem;
-  color: $color-text-muted;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 p {
   margin: 0 0 1rem 0;
+  color: $color-gray-700;
   line-height: 1.65;
 }
 
-// Header - Simple and clean
+// Header - Minimal
 .header {
-  background: $color-background;
-  border-bottom: 1px solid $color-border;
-  padding: 1rem 0;
+  border-bottom: 1px solid $color-gray-300;
+  background: $color-white;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -86,52 +86,50 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 64px;
 }
 
 .site-title {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: $color-text;
+  color: $color-black;
   text-decoration: none;
   
   &:hover {
-    color: $color-link;
+    color: $color-gray-700;
   }
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   
   a {
-    color: $color-text-muted;
+    color: $color-gray-500;
     text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
-    transition: all 0.2s;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
     
     &:hover {
-      color: $color-link;
-      background: $color-background-secondary;
+      color: $color-black;
     }
   }
 }
 
 // Main content
 .wrapper {
-  padding: 2rem 0;
+  padding: 3rem 0;
   min-height: calc(100vh - 120px);
 }
 
 main {
-  background: $color-background;
-  line-height: 1.65;
+  background: $color-white;
 }
 
-// Links - Simple Obsidian style
+// Links - Vercel style
 a {
-  color: $color-link;
+  color: $color-accent;
   text-decoration: none;
   
   &:hover {
@@ -139,247 +137,236 @@ a {
   }
   
   &.internal-link {
-    color: $color-accent;
+    color: $color-black;
+    border-bottom: 1px solid $color-gray-300;
     
     &:hover {
-      text-decoration: underline;
+      border-bottom-color: $color-black;
+      text-decoration: none;
     }
   }
   
   &:not(.internal-link):after {
     content: "↗";
     font-size: 0.75em;
-    opacity: 0.5;
-    margin-left: 0.2em;
+    margin-left: 0.25em;
+    opacity: 0.6;
   }
 }
 
-// Note layout - Clean and minimal
+// Note layout
 #notes-entry-container {
   display: grid;
   grid-template-areas: "content" "side";
-  gap: 2rem;
+  gap: 3rem;
   
-  @media (min-width: 900px) {
-    grid-template-columns: 1fr 300px;
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 280px;
     grid-template-areas: "content side";
   }
 }
 
 content {
   grid-area: content;
-  max-width: none;
 }
 
 side {
   grid-area: side;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
-// Sidebar - Clean sections
+// Sidebar - Ultra clean
 .sidebar-section {
   margin-bottom: 2rem;
-  padding: 1rem;
-  background: $color-background-secondary;
-  border: 1px solid $color-border;
-  border-radius: 6px;
   
   h3 {
     margin: 0 0 1rem 0;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: $color-text-muted;
+    color: $color-gray-500;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
   }
 }
 
 .backlinks-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .backlink-box {
-  padding: 0.75rem;
-  background: $color-background;
-  border: 1px solid $color-border;
-  border-radius: 4px;
-  transition: border-color 0.2s;
-  
-  &:hover {
-    border-color: $color-accent;
-  }
+  padding: 0;
   
   .internal-link {
     font-weight: 500;
     display: block;
     margin-bottom: 0.25rem;
+    border: none;
+    
+    &:hover {
+      border: none;
+    }
   }
 }
 
 .backlink-excerpt {
-  color: $color-text-muted;
-  font-size: 0.85rem;
+  color: $color-gray-500;
+  font-size: 0.8rem;
   line-height: 1.4;
 }
 
 .no-backlinks {
-  color: $color-text-muted;
+  color: $color-gray-400;
+  font-size: 0.8rem;
   font-style: italic;
-  text-align: center;
-  padding: 1rem;
 }
 
 // Note header
 .note-header {
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $color-gray-300;
 }
 
 .note-meta {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   flex-wrap: wrap;
 }
 
-// Time display
+// Time
 time {
-  color: $color-text-muted;
-  font-size: 0.85rem;
-  background: $color-background-secondary;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+  color: $color-gray-500;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
-// Simple cards for homepage
+// Cards - Minimal
 .note-card {
-  background: $color-background;
-  border: 1px solid $color-border;
-  border-radius: 6px;
+  border: 1px solid $color-gray-300;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  transition: border-color 0.2s;
+  background: $color-white;
+  transition: border-color 0.2s ease;
   
   &:hover {
-    border-color: $color-accent;
+    border-color: $color-gray-500;
   }
   
   h3, h4 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   
   p {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
   }
   
   ul {
     margin: 0;
-    padding-left: 1.2rem;
+    padding-left: 1.25rem;
     
     li {
       margin-bottom: 0.25rem;
+      font-size: 0.875rem;
+      color: $color-gray-700;
     }
   }
 }
 
 .note-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-// Category sections - Minimal style
+// Category sections
 .category-section {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: $color-background-secondary;
-  border-left: 3px solid $color-accent;
-  border-radius: 0 6px 6px 0;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid $color-gray-300;
+  
+  &:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .category-title {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: $color-text;
+  color: $color-black;
   margin-bottom: 1rem;
 }
 
 // Badges - Minimal
 .badge {
-  font-size: 0.75rem;
-  padding: 0.2em 0.5em;
-  border-radius: 3px;
+  font-size: 0.6rem;
+  padding: 0.25em 0.5em;
+  border: 1px solid $color-gray-300;
+  color: $color-gray-500;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
-  
-  &.prelims {
-    background: #e0f2fe;
-    color: #0369a1;
-  }
-  
-  &.mains {
-    background: #fef3c7;
-    color: #d97706;
-  }
-  
-  &.strategy {
-    background: #ede9fe;
-    color: #7c3aed;
-  }
+  letter-spacing: 0.05em;
+  background: $color-white;
 }
 
-// Code - Clean style
+// Code
 code {
-  background: $color-background-secondary;
-  border: 1px solid $color-border;
-  padding: 0.15em 0.3em;
-  border-radius: 3px;
+  background: $color-gray-100;
+  padding: 0.125em 0.25em;
   font-family: $font-family-mono;
-  font-size: 0.9em;
-  color: $color-text;
+  font-size: 0.875em;
+  color: $color-gray-900;
 }
 
 pre {
-  background: $color-background-secondary;
-  border: 1px solid $color-border;
-  border-radius: 6px;
+  background: $color-gray-100;
+  border: 1px solid $color-gray-300;
   padding: 1rem;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
   
   code {
     background: none;
-    border: none;
     padding: 0;
+    border: none;
   }
 }
 
 // Lists
 ul, ol {
   padding-left: 1.5rem;
-  margin: 0.75rem 0;
+  margin: 1rem 0;
   
   li {
     margin-bottom: 0.25rem;
-    line-height: 1.6;
+    color: $color-gray-700;
   }
 }
 
 // Blockquotes
 blockquote {
-  border-left: 3px solid $color-border;
-  margin: 1rem 0;
-  padding: 0.5rem 0 0.5rem 1rem;
-  color: $color-text-muted;
+  border-left: 2px solid $color-gray-300;
+  margin: 1.5rem 0;
+  padding: 0 0 0 1rem;
+  color: $color-gray-500;
   font-style: italic;
   
   p {
     margin: 0;
+    color: inherit;
   }
 }
 
@@ -387,21 +374,20 @@ blockquote {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
-  border: 1px solid $color-border;
-  border-radius: 6px;
-  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 1px solid $color-gray-300;
   
   th, td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-gray-300;
+    font-size: 0.875rem;
   }
   
   th {
-    background: $color-background-secondary;
+    background: $color-gray-100;
     font-weight: 600;
-    color: $color-text;
+    color: $color-black;
   }
   
   tr:last-child td {
@@ -413,26 +399,24 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 // Footer
 footer {
-  border-top: 1px solid $color-border;
+  border-top: 1px solid $color-gray-300;
   padding: 2rem 0;
   margin-top: 3rem;
   text-align: center;
-  color: $color-text-muted;
-  font-size: 0.9rem;
+  color: $color-gray-500;
+  font-size: 0.8rem;
 }
 
 // Invalid links
 .invalid-link {
-  color: $color-text-muted;
-  background: $color-background-secondary;
+  color: $color-gray-400;
+  background: $color-gray-100;
   padding: 0.1em 0.2em;
-  border-radius: 3px;
 }
 
 .invalid-link-brackets {
@@ -441,56 +425,57 @@ footer {
 
 // Update date
 .update-date {
-  color: $color-text-muted;
-  font-size: 0.85rem;
+  color: $color-gray-500;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 // Horizontal rules
 hr {
   border: none;
   height: 1px;
-  background: $color-border;
+  background: $color-gray-300;
   margin: 2rem 0;
 }
 
 // Responsive
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-  }
-  
   .container {
-    padding: 0 15px;
+    padding: 0 16px;
   }
   
   .nav-container {
     flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
     gap: 1rem;
   }
   
   .nav-links {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   h2 {
-    font-size: 1.4rem;
-  }
-  
-  .note-grid {
-    grid-template-columns: 1fr;
+    font-size: 1.5rem;
   }
   
   .note-meta {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
   
   #notes-entry-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .wrapper {
+    padding: 2rem 0;
   }
 }
 
@@ -502,5 +487,5 @@ hr {
 
 // Selection
 ::selection {
-  background: rgba(99, 102, 241, 0.2);
+  background: rgba(0, 112, 243, 0.1);
 }
