@@ -7,11 +7,11 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="note-meta">
       {% if page.category %}
-        <span class="badge {{ page.category }}">{{ page.category | capitalize }}</span>
+        <span class="badge {{ page.category }}">{{ page.category }}</span>
       {% endif %}
       {% if page.type != 'pages' %}
         <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
-          Last updated: {{ page.last_modified_at | date: "%B %-d, %Y" }}
+          {{ page.last_modified_at | date: "%B %-d, %Y" }}
         </time>
       {% endif %}
     </div>
@@ -24,7 +24,7 @@ layout: default
 
     <side>
       <div class="sidebar-section">
-        <h3>🔗 Linked Notes</h3>
+        <h3>Linked Notes</h3>
         {% if page.backlinks.size > 0 %}
           <div class="backlinks-container">
             {% for backlink in page.backlinks %}
@@ -32,20 +32,20 @@ layout: default
                 <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
                   {{ backlink.title }}
                 </a>
-                <div class="backlink-excerpt">{{ backlink.excerpt | strip_html | truncatewords: 15 }}</div>
+                <div class="backlink-excerpt">{{ backlink.excerpt | strip_html | truncatewords: 12 }}</div>
               </div>
             {% endfor %}
           </div>
         {% else %}
           <div class="no-backlinks">
-            <p>📝 This note hasn't been linked to yet. Start connecting your knowledge!</p>
+            <p>No notes link to this one yet.</p>
           </div>
         {% endif %}
       </div>
 
       <div class="sidebar-section">
-        <h3>📊 Note Graph</h3>
-        <p class="graph-description">Explore connections between all notes:</p>
+        <h3>Graph</h3>
+        <p style="color: #6c7782; font-size: 0.85rem; margin-bottom: 1rem;">Visual connections between notes</p>
         {% include notes_graph.html %}
       </div>
     </side>
