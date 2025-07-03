@@ -1,136 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
+  <title>
+    {% if page.title and page.title != "" %}
+      {{page.title}} - {{site.title}}
+    {% else %}
+      {{site.title}} - {{site.description}}
+    {% endif %}
+  </title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
   {% include head.html %}
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="nav-container">
-          <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
-          <nav class="nav-links">
-            <div class="nav-dropdown">
-              <button class="nav-dropdown-toggle" aria-expanded="false">
-                <span>Explore</span>
-                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12">
-                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                </svg>
-              </button>
-              <div class="nav-dropdown-menu">
-                <div class="nav-section">
-                  <div class="nav-section-header">
-                    <button class="nav-section-toggle" aria-expanded="false">
-                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
-                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                      </svg>
-                      <span>Prelims</span>
-                    </button>
-                  </div>
-                  <div class="nav-section-content">
-                    <a href="{{ site.baseurl }}/prelims" class="nav-item">Overview</a>
-                    <div class="nav-subsection">
-                      <span class="nav-subsection-title">GS Paper 1</span>
-                      <a href="{{ site.baseurl }}/earths-interior" class="nav-subitem">Geography</a>
-                      <a href="{{ site.baseurl }}/prelims#history" class="nav-subitem">History</a>
-                    </div>
-                    <div class="nav-subsection">
-                      <span class="nav-subsection-title">GS Paper 2</span>
-                      <a href="{{ site.baseurl }}/constitution-of-india" class="nav-subitem">Constitution</a>
-                      <a href="{{ site.baseurl }}/judiciary" class="nav-subitem">Judiciary</a>
-                      <a href="{{ site.baseurl }}/emergency-provisions" class="nav-subitem">Emergency Provisions</a>
-                    </div>
-                  </div>
+</head>
+<body>
+  <!-- Header with Design System Colors -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav-container">
+        <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
+        
+        <div class="nav-links">
+          <a href="{{ site.baseurl }}/">Home</a>
+          <a href="{{ site.baseurl }}/about">About</a>
+          
+          <!-- Explore Dropdown - Following TreeView Design Specifications -->
+          <div class="nav-dropdown">
+            <button 
+              class="nav-dropdown-toggle" 
+              aria-expanded="false" 
+              aria-haspopup="true"
+              aria-label="Explore content sections"
+            >
+              Explore
+              <span class="dropdown-arrow" aria-hidden="true">▼</span>
+            </button>
+            
+            <div class="nav-dropdown-menu" role="menu">
+              <!-- Prelims Section -->
+              <div class="nav-section">
+                <div class="nav-section-header">
+                  <button 
+                    class="nav-section-toggle" 
+                    aria-expanded="false"
+                    aria-controls="prelims-content"
+                  >
+                    <span class="section-arrow" aria-hidden="true">▶</span>
+                    Prelims
+                  </button>
                 </div>
-                
-                <div class="nav-section">
-                  <div class="nav-section-header">
-                    <button class="nav-section-toggle" aria-expanded="false">
-                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
-                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                      </svg>
-                      <span>Mains</span>
-                    </button>
+                <div class="nav-section-content" id="prelims-content">
+                  <a href="{{ site.baseurl }}/prelims" class="nav-item" role="menuitem">Overview</a>
+                  
+                  <div class="nav-subsection">
+                    <span class="nav-subsection-title">GS-1</span>
+                    <a href="/notes/Prelims/GS-1/Geography/Strategy" class="nav-subitem" role="menuitem">Geography Strategy</a>
+                    <a href="/notes/Prelims/GS-1/Geography/LECTURE-NOTES/Earths%20Interior" class="nav-subitem" role="menuitem">Earth's Interior</a>
                   </div>
-                  <div class="nav-section-content">
-                    <a href="{{ site.baseurl }}/mains" class="nav-item">Overview</a>
-                    <a href="{{ site.baseurl }}/strategy-for-mains-2026" class="nav-subitem">Strategy 2026</a>
-                    <div class="nav-subsection">
-                      <span class="nav-subsection-title">Papers</span>
-                      <a href="{{ site.baseurl }}/mains#gs1" class="nav-subitem">GS-1</a>
-                      <a href="{{ site.baseurl }}/mains#gs2" class="nav-subitem">GS-2</a>
-                      <a href="{{ site.baseurl }}/mains#gs3" class="nav-subitem">GS-3</a>
-                      <a href="{{ site.baseurl }}/mains#gs4" class="nav-subitem">GS-4</a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="nav-section">
-                  <div class="nav-section-header">
-                    <button class="nav-section-toggle" aria-expanded="false">
-                      <svg class="section-arrow" width="10" height="10" viewBox="0 0 10 10">
-                        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                      </svg>
-                      <span>Resources</span>
-                    </button>
-                  </div>
-                  <div class="nav-section-content">
-                    <a href="{{ site.baseurl }}/your-first-note" class="nav-subitem">Getting Started</a>
-                    <a href="{{ site.baseurl }}/polity-definitions" class="nav-subitem">Definitions</a>
-                    <a href="{{ site.baseurl }}/polity" class="nav-subitem">Mnemonics</a>
+                  
+                  <div class="nav-subsection">
+                    <span class="nav-subsection-title">GS-2</span>
+                    <a href="/notes/Prelims/GS-2/Polity/LECTURE-NOTES/Judiciary/Judiciary" class="nav-subitem" role="menuitem">Judiciary</a>
+                    <a href="/notes/Prelims/GS-2/Polity/LECTURE-NOTES/Emergency%20Provisions/EMERGENCY%20PROVISIONS" class="nav-subitem" role="menuitem">Emergency Provisions</a>
+                    <a href="/notes/Prelims/GS-2/Polity/MISCELLANEOUS/CONSTITUTION/Constitution%20of%20India" class="nav-subitem" role="menuitem">Constitution of India</a>
+                    <a href="/notes/Prelims/GS-2/Polity/MISCELLANEOUS/IMPORTANT%20TERMS/Polity%20Definitions" class="nav-subitem" role="menuitem">Polity Definitions</a>
                   </div>
                 </div>
               </div>
+              
+              <!-- Mains Section -->
+              <div class="nav-section">
+                <div class="nav-section-header">
+                  <button 
+                    class="nav-section-toggle" 
+                    aria-expanded="false"
+                    aria-controls="mains-content"
+                  >
+                    <span class="section-arrow" aria-hidden="true">▶</span>
+                    Mains
+                  </button>
+                </div>
+                <div class="nav-section-content" id="mains-content">
+                  <a href="{{ site.baseurl }}/mains" class="nav-item" role="menuitem">Overview</a>
+                  <a href="/notes/MAINS/STRATEGY%20FOR%20MAINS%202026" class="nav-item" role="menuitem">Strategy for Mains 2026</a>
+                </div>
+              </div>
+              
+              <!-- Resources Section -->
+              <div class="nav-section">
+                <div class="nav-section-header">
+                  <button 
+                    class="nav-section-toggle" 
+                    aria-expanded="false"
+                    aria-controls="resources-content"
+                  >
+                    <span class="section-arrow" aria-hidden="true">▶</span>
+                    Resources
+                  </button>
+                </div>
+                <div class="nav-section-content" id="resources-content">
+                  <a href="/notes/Prelims/GS-2/Polity/MISCELLANEOUS/MNEMONICS/POLITY" class="nav-item" role="menuitem">Polity Mnemonics</a>
+                  <a href="/notes/Prelims/GS-2/Polity/MISCELLANEOUS/MNEMONICS/FINILOGY%20TIPS%20AND%20TRICKS" class="nav-item" role="menuitem">Study Tips & Tricks</a>
+                  <a href="/notes/Prelims/GS-2/Polity/MISCELLANEOUS/IMPORTANT%20AMENDEMENTS/Constitutional%20Amendment" class="nav-item" role="menuitem">Constitutional Amendments</a>
+                </div>
+              </div>
             </div>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
+          </div>
         </div>
-      </div>
-    </header>
-
-    <div class="container">
-      <div class="wrapper">
-        <main>{{ content }}</main>
-        <footer>{% include footer.html %}</footer>
-      </div>
+      </nav>
     </div>
+  </header>
 
-    {% include link-previews.html wrapperQuerySelector="main" %}
-    
-    <script>
-      // Dropdown navigation functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        // Main dropdown toggle
-        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
-        
-        if (dropdownToggle && dropdownMenu) {
-          dropdownToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
-            dropdownToggle.setAttribute('aria-expanded', !isExpanded);
-            dropdownMenu.classList.toggle('show');
-          });
-        }
-        
-        // Section toggles
-        const sectionToggles = document.querySelectorAll('.nav-section-toggle');
-        sectionToggles.forEach(toggle => {
-          toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            const content = toggle.closest('.nav-section').querySelector('.nav-section-content');
-            
-            toggle.setAttribute('aria-expanded', !isExpanded);
-            content.classList.toggle('show');
-          });
+  <!-- Main Content Following Design System Layout -->
+  <div class="wrapper">
+    <div class="container">
+      <main>
+        {{ content }}
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer Following Design System -->
+  <footer>
+    <div class="container">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with Jekyll for UPSC preparation.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Dropdown Navigation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Main dropdown toggle
+      const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+      const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+      
+      if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+          
+          dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+          dropdownMenu.classList.toggle('show');
         });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
           if (!e.target.closest('.nav-dropdown')) {
-            dropdownToggle?.setAttribute('aria-expanded', 'false');
-            dropdownMenu?.classList.remove('show');
+            dropdownToggle.setAttribute('aria-expanded', 'false');
+            dropdownMenu.classList.remove('show');
+          }
+        });
+      }
+      
+      // Section toggles
+      const sectionToggles = document.querySelectorAll('.nav-section-toggle');
+      
+      sectionToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          const contentId = toggle.getAttribute('aria-controls');
+          const content = document.getElementById(contentId);
+          
+          if (content) {
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            content.classList.toggle('show');
           }
         });
       });
-    </script>
-  </body>
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const openDropdown = document.querySelector('.nav-dropdown-toggle[aria-expanded="true"]');
+          if (openDropdown) {
+            openDropdown.setAttribute('aria-expanded', 'false');
+            document.querySelector('.nav-dropdown-menu').classList.remove('show');
+            openDropdown.focus();
+          }
+        }
+      });
+    });
+  </script>
+</body>
 </html>

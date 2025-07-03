@@ -1,0 +1,388 @@
+{
+    "designSystem": {
+      "name": "UPSC Notes Application Design System",
+      "version": "1.0.0",
+      "description": "Comprehensive design system profile for note-taking application interface"
+    },
+    "colorPalette": {
+      "primary": {
+        "blue": "#1976D2",
+        "darkBlue": "#0D47A1",
+        "lightBlue": "#42A5F5"
+      },
+      "secondary": {
+        "orange": "#FF9800",
+        "lightOrange": "#FFB74D",
+        "darkOrange": "#F57C00"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "lightGray": "#F5F5F5",
+        "mediumGray": "#E0E0E0",
+        "darkGray": "#757575",
+        "charcoal": "#424242",
+        "black": "#212121"
+      },
+      "accent": {
+        "green": "#4CAF50",
+        "purple": "#9C27B0",
+        "red": "#F44336"
+      },
+      "background": {
+        "primary": "#FAFAFA",
+        "secondary": "#F5F5F5",
+        "selected": "#E3F2FD",
+        "hover": "#F0F0F0"
+      }
+    },
+    "elementStyling": {
+      "layout": {
+        "sidebar": {
+          "background": "#F5F5F5",
+          "border": "1px solid #E0E0E0",
+          "width": "280px",
+          "shadow": "none"
+        },
+        "mainContent": {
+          "background": "#FFFFFF",
+          "padding": "24px",
+          "border": "none",
+          "shadow": "none"
+        },
+        "tabBar": {
+          "background": "#FAFAFA",
+          "border": "1px solid #E0E0E0",
+          "height": "40px",
+          "shadow": "none"
+        }
+      },
+      "navigation": {
+        "treeView": {
+          "background": "transparent",
+          "itemPadding": "8px 12px",
+          "indentSize": "20px",
+          "states": {
+            "default": {
+              "background": "transparent",
+              "text": "#424242",
+              "icon": "#757575"
+            },
+            "hover": {
+              "background": "#F0F0F0",
+              "text": "#212121",
+              "icon": "#424242"
+            },
+            "selected": {
+              "background": "#FFE0E0",
+              "text": "#212121",
+              "icon": "#F44336",
+              "border": "none"
+            },
+            "expanded": {
+              "background": "transparent",
+              "text": "#212121",
+              "icon": "#424242"
+            }
+          }
+        },
+        "expandIcons": {
+          "size": "12px",
+          "color": "#757575",
+          "states": {
+            "collapsed": {
+              "icon": "chevron-right",
+              "color": "#757575"
+            },
+            "expanded": {
+              "icon": "chevron-down",
+              "color": "#424242"
+            }
+          }
+        }
+      },
+      "content": {
+        "headers": {
+          "h1": {
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "color": "#1976D2",
+            "marginBottom": "16px",
+            "textTransform": "uppercase",
+            "letterSpacing": "0.5px"
+          },
+          "h2": {
+            "fontSize": "20px",
+            "fontWeight": "500",
+            "color": "#424242",
+            "marginBottom": "12px",
+            "textTransform": "none"
+          },
+          "h3": {
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "color": "#FF9800",
+            "marginBottom": "8px",
+            "textTransform": "none"
+          }
+        },
+        "text": {
+          "body": {
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "color": "#424242",
+            "lineHeight": "1.5"
+          },
+          "description": {
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "color": "#757575",
+            "lineHeight": "1.4"
+          },
+          "emphasis": {
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "color": "#212121",
+            "textTransform": "uppercase"
+          }
+        },
+        "lists": {
+          "bulletPoint": {
+            "marginLeft": "20px",
+            "marginBottom": "4px",
+            "bulletColor": "#1976D2",
+            "bulletSize": "4px",
+            "textColor": "#424242"
+          },
+          "nestedBullet": {
+            "marginLeft": "40px",
+            "bulletColor": "#9C27B0",
+            "bulletSize": "4px"
+          }
+        }
+      },
+      "icons": {
+        "sizes": {
+          "small": "14px",
+          "medium": "16px",
+          "large": "20px"
+        },
+        "colors": {
+          "navigation": "#757575",
+          "selected": "#F44336",
+          "accent": "#FF9800",
+          "primary": "#1976D2",
+          "secondary": "#9C27B0"
+        },
+        "states": {
+          "default": {
+            "opacity": "0.8",
+            "fill": "#757575"
+          },
+          "hover": {
+            "opacity": "1.0",
+            "fill": "#424242"
+          },
+          "active": {
+            "opacity": "1.0",
+            "fill": "#1976D2"
+          }
+        }
+      },
+      "buttons": {
+        "tab": {
+          "background": "transparent",
+          "border": "none",
+          "padding": "8px 16px",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "states": {
+            "default": {
+              "background": "transparent",
+              "text": "#757575",
+              "border": "none"
+            },
+            "hover": {
+              "background": "#F0F0F0",
+              "text": "#424242",
+              "border": "none"
+            },
+            "active": {
+              "background": "#FFFFFF",
+              "text": "#212121",
+              "border": "1px solid #E0E0E0",
+              "borderBottom": "1px solid #FFFFFF"
+            }
+          }
+        },
+        "close": {
+          "size": "16px",
+          "color": "#757575",
+          "background": "transparent",
+          "border": "none",
+          "states": {
+            "hover": {
+              "color": "#424242",
+              "background": "#F0F0F0"
+            }
+          }
+        }
+      },
+      "cards": {
+        "background": "#FFFFFF",
+        "border": "1px solid #E0E0E0",
+        "borderRadius": "4px",
+        "padding": "16px",
+        "margin": "8px 0",
+        "shadow": "none",
+        "states": {
+          "hover": {
+            "border": "1px solid #BDBDBD",
+            "shadow": "0 2px 4px rgba(0,0,0,0.1)"
+          }
+        }
+      },
+      "highlights": {
+        "colorCoding": {
+          "definitions": {
+            "background": "transparent",
+            "text": "#212121",
+            "emphasis": "#1976D2"
+          },
+          "important": {
+            "background": "transparent",
+            "text": "#FF9800",
+            "fontWeight": "600"
+          },
+          "categories": {
+            "background": "transparent",
+            "text": "#9C27B0",
+            "fontWeight": "500"
+          }
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "fontSizes": {
+        "xs": "11px",
+        "sm": "13px",
+        "base": "14px",
+        "lg": "16px",
+        "xl": "18px",
+        "2xl": "20px",
+        "3xl": "24px"
+      },
+      "fontWeights": {
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700"
+      },
+      "lineHeights": {
+        "tight": "1.2",
+        "normal": "1.4",
+        "relaxed": "1.5",
+        "loose": "1.6"
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "base": "12px",
+      "md": "16px",
+      "lg": "20px",
+      "xl": "24px",
+      "2xl": "32px"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "2px",
+      "base": "4px",
+      "md": "6px",
+      "lg": "8px"
+    },
+    "shadows": {
+      "none": "none",
+      "sm": "0 1px 2px rgba(0,0,0,0.05)",
+      "base": "0 2px 4px rgba(0,0,0,0.1)",
+      "md": "0 4px 8px rgba(0,0,0,0.1)",
+      "lg": "0 8px 16px rgba(0,0,0,0.1)"
+    },
+    "applicationRules": {
+      "DO_APPLY": {
+        "gradients": "NEVER - this design uses solid colors only",
+        "shadows": "Only on hover states for cards and buttons",
+        "borderRadius": "Consistently 4px for all cards and containers",
+        "colorCoding": "Use specific colors for different content types (blue for headers, orange for emphasis, purple for categories)",
+        "spacing": "Consistent 8px, 12px, 16px, 24px intervals",
+        "typography": "Maintain hierarchy with size, weight, and color variations"
+      },
+      "DO_NOT_APPLY": {
+        "gradients": "DO NOT use gradients anywhere in this design system",
+        "brightColors": "DO NOT use bright or saturated colors for backgrounds",
+        "heavyShadows": "DO NOT apply shadows to text or icons",
+        "roundedCorners": "DO NOT use border radius larger than 4px",
+        "colorMixing": "DO NOT apply navigation colors to content or vice versa",
+        "backgroundColors": "DO NOT use colored backgrounds for text content areas"
+      }
+    },
+    "stateManagement": {
+      "hover": {
+        "duration": "150ms",
+        "easing": "ease-in-out",
+        "properties": ["background-color", "border-color", "color", "box-shadow"]
+      },
+      "focus": {
+        "outline": "2px solid #1976D2",
+        "outlineOffset": "2px",
+        "borderRadius": "4px"
+      },
+      "active": {
+        "transform": "none",
+        "boxShadow": "inset 0 1px 2px rgba(0,0,0,0.1)"
+      }
+    },
+    "componentSpecifications": {
+      "sidebar": {
+        "width": "280px",
+        "background": "#F5F5F5",
+        "border": "1px solid #E0E0E0",
+        "borderRadius": "0px",
+        "shadow": "none"
+      },
+      "treeViewItem": {
+        "padding": "8px 12px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "indentation": "20px per level"
+      },
+      "contentArea": {
+        "background": "#FFFFFF",
+        "padding": "24px",
+        "border": "none",
+        "shadow": "none"
+      },
+      "tabContainer": {
+        "background": "#FAFAFA",
+        "border": "1px solid #E0E0E0",
+        "height": "40px",
+        "borderRadius": "0px"
+      }
+    },
+    "accessibilityRequirements": {
+      "colorContrast": {
+        "minimum": "4.5:1 for normal text",
+        "enhanced": "7:1 for emphasis text"
+      },
+      "focusIndicators": {
+        "visible": true,
+        "color": "#1976D2",
+        "width": "2px",
+        "style": "solid"
+      },
+      "interactiveElements": {
+        "minimumSize": "44px",
+        "spacing": "8px minimum between elements"
+      }
+    }
+  }
